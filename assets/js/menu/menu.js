@@ -59,15 +59,6 @@ $(document).ready(function() {
       alert('Sprite animation complete!');
     }
   });
-
-  $(".char-img").animateSprite('stop');
-
-  $(".char-img").mouseleave(function() {
-    $(this).animateSprite('stop');
-  });
-  $(".char-img").mouseover(function() {
-    $(this).animateSprite('resume');
-  });
 });
 
 function loadGame(char) {
