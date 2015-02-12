@@ -70,7 +70,7 @@ function loadGame(char) {
     pr++;
     if (pr == 100) {
       $("#load").removeClass("animated zoomInUp");
-      $("#load").addClass("animated zoomOutDown");
+      $("#load").addClass("animated bounceOut");
       clearInterval(loadbar);
       gameInit();
     }
