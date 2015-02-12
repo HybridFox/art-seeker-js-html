@@ -30,8 +30,8 @@
   transform: scale(6,6);
 
   position: absolute;
-	  top: 430px;
-	  left: 0px;
+  bottom: 105px;
+	left: 50px;
 }
 
 .inventory-container {
