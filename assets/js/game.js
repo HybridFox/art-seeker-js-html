@@ -17,41 +17,17 @@ window.addEventListener('keydown', function (e) {
 
 
 
-$(document).keydown(function(e){
-    // left arrow
-    if ((e.keyCode || e.which) == 37)
-    {
-
-        $('#character').animateSprite('fps', 4);
-        $('#character').animateSprite('play', 'walkLeft');
-
-        console.log("left");
-    }
-    // right arrow
-    if ((e.keyCode || e.which) == 39)
-    {
-        // do something
-    }
-});
 
 
 $(document).keydown(function (e) {
   if (!currentKey) {
     currentKey = e.keyCode;
     switch (e.keyCode) {
-      case 38:
-        charWalk('up');
-        break;
       case 39:
         charWalk('right');
         break;
-      case 40:
-        charWalk('down');
-        break;
       case 37:
         charWalk('left');
-
-
         break;
     }
   }
@@ -96,25 +72,18 @@ function processWalk(dir) {
   }
   // Move &
 
-	  switch(dir) {
-	    case'front':
-		    $('#character').animate({top: '+=32'}, charSpeed);
-		  break;
-		case'back':
-		  if ($('#character').position().top > 0) {
-		    $('#character').animate({top: '-=32'}, charSpeed);
-		  }
-		  break;
+	 switch(dir) {
 		case'left':
 		  if ($('#character').position().left > 0) {
-        $('#character').animateSprite('play', 'walkLeft');
 		    $('#character').animate({left: '-=32'}, charSpeed);
-
+        $('#character').removeClass("turn-right");
+        $('#character').addClass("turn-left");
 		  }
 		  break;
 		case'right':
-
 		    $('#character').animate({left: '+=32'}, charSpeed);
+        $('#character').removeClass("turn-left");
+        $('#character').addClass("turn-right");
 		  break;
 	  }
 }
