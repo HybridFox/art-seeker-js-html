@@ -2,7 +2,6 @@ var pr;
 
 $(document).ready(function() {
   console.log( "ready!" );
-  $("#game").slideUp();
   $(".char-img.o-1").animateSprite({
     fps: 4,
     loop: true,
@@ -78,7 +77,8 @@ function loadGame(char) {
 }
 
 function gameInit() {
-  $.get("content/game.html", function(data){
+  $.get("content/game.php", function(data){
     $("#game").html(data);
+    $("#game").addClass("animated flipInX");
   });
 }
