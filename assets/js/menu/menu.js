@@ -79,6 +79,7 @@ function loadGame(char) {
 function gameInit(char) {
   $.get("content/game.php", function(data){
     $("#game").html(data);
+    clickInit();
     $("#game").addClass("animated zoomIn");
 
   if (char == "hero1") {

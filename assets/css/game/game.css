@@ -127,13 +127,17 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  z-index: 300;
 }
 
 #overlay > .pickup-item > img {
-  animation: hover 5s ease-in-out infinite;
-
   position: relative;
   top: -110px;
   height: 100px;
   width: 100px;
+}
+
+.hover {
+  animation: hover 5s ease-in-out infinite;
 }
