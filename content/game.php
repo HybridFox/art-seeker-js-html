@@ -21,6 +21,8 @@
     </div>
   </div>
   <div class="room">
+    <div id="character">
 
+    </div>
   </div>
 </div>
