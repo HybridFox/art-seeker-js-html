@@ -13,21 +13,17 @@ window.addEventListener('keydown', function (e) {
   }
 }, false);
 
-
-
-
-
-
-
 $(document).keydown(function (e) {
   if (!currentKey) {
     currentKey = e.keyCode;
     switch (e.keyCode) {
       case 39:
         charWalk('right');
+        $("#character").animateSprite('resume');
         break;
       case 37:
         charWalk('left');
+        $("#character").animateSprite('resume');
         break;
     }
   }
@@ -39,7 +35,7 @@ $(document).keyup(function (e) {
   if (e.keyCode == currentKey) {
     currentKey = false;
     clearInterval(TimerWalk);
-    $('#character').stop(true, true);
+    $('#character').animateSprite('stop')
   }
 });
 function charWalk(dir) {
@@ -52,36 +48,16 @@ function charWalk(dir) {
   }, charSpeed);
 }
 function processWalk(dir) {
-  charStep++;
-  if (charStep == 5) charStep = 1;
-  //remove the current class
-  //add the new class
-  switch (charStep) {
-    case 1:
-
-      break;
-    case 2:
-
-      break;
-    case 3:
-
-      break;
-    case 4:
-
-      break;
-  }
-  // Move &
-
 	 switch(dir) {
 		case'left':
 		  if ($('#character').position().left > 0) {
-		    $('#character').animate({left: '-=32'}, charSpeed);
+		    $('#character').animate({left: '-=20'}, charSpeed);
         $('#character').removeClass("turn-right");
         $('#character').addClass("turn-left");
 		  }
 		  break;
 		case'right':
-		    $('#character').animate({left: '+=32'}, charSpeed);
+		    $('#character').animate({left: '+=20'}, charSpeed);
         $('#character').removeClass("turn-left");
         $('#character').addClass("turn-right");
 		  break;
