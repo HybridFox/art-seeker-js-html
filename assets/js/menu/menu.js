@@ -80,5 +80,18 @@ function gameInit() {
   $.get("content/game.php", function(data){
     $("#game").html(data);
     $("#game").addClass("animated zoomIn");
+
+    $("#character").animateSprite({
+    fps: 4,
+    loop: true,
+    animations: {
+      walkRight: [1, 2, 3, 4],
+      walkLeft: [6, 7, 8, 9],
+      idle: [0, 5]
+    },
+    complete: function(){
+      alert('Sprite animation complete!');
+    }
+  });
   });
 }
