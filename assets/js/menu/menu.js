@@ -2,7 +2,6 @@ var pr;
 
 $(document).ready(function() {
   console.log( "ready!" );
-  $("#load").slideUp();
   $("#game").slideUp();
   $(".char-img.o-1").animateSprite({
     fps: 4,
@@ -62,14 +61,16 @@ $(document).ready(function() {
 });
 
 function loadGame(char) {
-  $("#menu").slideUp();
-  $("#load").slideDown();
+  $("#menu").addClass("animated bounceOut");
+  $("#load").addClass("animated zoomInUp");
   pr = 0;
 
   var loadbar = setInterval(function(){
     $(".load-bar > .inner").css("width",pr + "%");
     pr++;
     if (pr == 100) {
+      $("#load").removeClass("animated zoomInUp");
+      $("#load").addClass("animated zoomOutDown");
       clearInterval(loadbar);
       gameInit();
     }
@@ -77,9 +78,7 @@ function loadGame(char) {
 }
 
 function gameInit() {
-  $("#load").slideUp();
-
   $.get("content/game.html", function(data){
-    $("body").html(data);
+    $("#game").html(data);
   });
 }
