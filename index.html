@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Game</title>
+    <link rel="stylesheet" href="assets/css/load.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="assets/css/menu/menu.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="assets/css/buttons.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="assets/css/game/game.css" media="screen" title="no title" charset="utf-8">
+
+    <script type="text/javascript" src="assets/js/dist/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/sprite.animation.js"></script>
+    <script type="text/javascript" src="assets/js/menu/menu.js"></script>
+  </head>
+  <body>
+    <div id="menu">
+      <div class="logo-container">
+        <img src="assets/img/menu/logo.png" alt="Logo" class="menu-logo"/>
+      </div>
+      <h1>Choose Your Hero!</h1>
+      <div class="char-selection">
+        <div class="char-container" onclick="loadGame('hero1')">
+          <div class="char-option">
+            <div class="char-img o-1">
+
+            </div>
+          </div>
+          <input type="submit" class="play_button btn-yellow" value="Choose Me!" onclick="loadGame('hero1')">
+        </div>
+        <div class="char-container" onclick="loadGame('hero1')">
+          <div class="char-option">
+            <div class="char-img o-2">
+
+            </div>
+          </div>
+          <input type="submit" class="play_button btn-yellow" value="I'll quest!" onclick="loadGame('hero1')">
+        </div>
+        <div class="char-container" onclick="loadGame('hero1')">
+          <div class="char-option">
+            <div class="char-img o-3">
+
+            </div>
+          </div>
+          <input type="submit" class="play_button btn-yellow" value="Never left!" onclick="loadGame('hero1')">
+        </div>
+        <div class="char-container" onclick="loadGame('hero1')">
+          <div class="char-option">
+            <div class="char-img o-4">
+
+            </div>
+          </div>
+          <input type="submit" class="play_button btn-yellow" value="No worries!" onclick="loadGame('hero1')">
+        </div>
+        <div class="char-container" onclick="loadGame('hero1')">
+          <div class="char-option">
+            <div class="char-img o-5">
+
+            </div>
+          </div>
+          <input type="submit" class="play_button btn-yellow" value="Love you!" onclick="loadGame('hero1')">
+        </div>
+      </div>
+    </div>
+
+
+    <div id="load">
+      <div class="load-bar">
+        <div class="inner">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

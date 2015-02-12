@@ -1,0 +1,134 @@
+* {
+  image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+html {
+  font-family: pixel !important;
+}
+
+body {
+  background: url("../../img/menu/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#menu > h1 {
+  text-align: center;
+  font-family: visitor;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.menu-logo {
+  width: 700px;
+}
+
+.logo-container {
+  width: 700px;
+  margin: 50px auto 0px auto;
+  position: relative;
+  top: -20px;
+
+  animation: logo-animation 10s ease-in-out infinite;
+}
+
+@keyframes logo-animation {
+  0% {top:-20px;}
+  50% {top:30px;}
+  100% {top:-20px;}
+}
+
+.sprite {
+  width: 20px;
+  height: 40px;
+  background: url("../../img/spritesheet.png");
+  transform: scale(3,3);
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.char-img {
+  width: 20px;
+  height: 40px;
+  background: url("../../img/spritesheet.png");
+  margin: 90px auto;
+  transform: scale(4,4);
+}
+
+.char-selection {
+  width: 1020px;
+  margin: auto;
+}
+
+.char-container {
+  height: 300px;
+  width: 200px;
+  display: inline-block;
+  cursor: pointer;
+
+  transition: all .2s;
+}
+
+.char-container:hover {
+  transform:matrix(1.20,0.06,-0.06,1.20,0,0);
+  -ms-transform:matrix(1.20,0.06,-0.06,1.20,0,0);
+  -webkit-transform:matrix(1.20,0.06,-0.06,1.20,0,0);
+}
+
+.play-button {
+  padding: 5px;
+  width: 200px;
+  height: 30px;
+}
+
+.char-option {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+
+  background: url("../../img/menu/player_frame.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.char-option > img {
+  height: 180px;
+  padding: 10px 55px;
+}
+
+
+#load {
+
+}
+
+.load-bar {
+  width: 500px;
+  height: 70px;
+  border: 5px solid black;
+  margin: 20% auto;
+  padding: 5px;
+}
+
+.load-bar > .inner {
+  width: 50%;
+  height: 100%;
+  background-color: red;
+}
