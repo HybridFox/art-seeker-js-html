@@ -79,6 +79,6 @@ function loadGame(char) {
 function gameInit() {
   $.get("content/game.php", function(data){
     $("#game").html(data);
-    $("#game").addClass("animated flipInX");
+    $("#game").addClass("animated zoomIn");
   });
 }

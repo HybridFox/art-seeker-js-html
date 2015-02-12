@@ -34,6 +34,11 @@
 	  left: 0px;
 }
 
+.inventory-container {
+  width: 870px;
+  margin: auto;
+}
+
 #inventory {
   position: absolute;
   top: 0px;
@@ -42,21 +47,25 @@
   height: 250px;
 
   background: rgba(0,0,0,0.63);
-background: -moz-linear-gradient(top, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.63)), color-stop(55%, rgba(0,0,0,0.63)), color-stop(100%, rgba(0,0,0,0)));
-background: -webkit-linear-gradient(top, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
-background: -o-linear-gradient(top, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
-background: -ms-linear-gradient(top, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
-background: linear-gradient(to bottom, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.63)), color-stop(55%, rgba(0,0,0,0.63)), color-stop(100%, rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.63) 0%, rgba(0,0,0,0.63) 55%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
 
   z-index: 50;
 }
 
-#inventory > .slot {
-  border: 2px solid black;
-  height: 50px;
-  width: 50px;
+.inventory-container > .slot {
+  background: url("../../img/game/inventory_slot.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 150px;
+  width: 150px;
   margin: 10px;
   display: inline-block;
 }
