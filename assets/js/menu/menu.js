@@ -77,9 +77,8 @@ function loadGame(char) {
 }
 
 function gameInit(char) {
-  $.get("content/game.php", function(data){
+  $.get("content/game.php?room=0", function(data){
     $("#game").html(data);
-    clickInit();
     $("#game").addClass("animated zoomIn");
 
   if (char == "hero1") {
@@ -143,5 +142,10 @@ function gameInit(char) {
         }
       });
     }
+  });
+
+  $.get("content/room.php?room=0", function(data){
+    $(".room-container").html(data);
+    clickInit();
   });
 }

@@ -48,6 +48,7 @@ function charWalk(dir) {
   }, charSpeed);
 }
 function processWalk(dir) {
+  checkPos();
    switch(dir) {
     case'left':
       if ($('#character').position().left > 0) {

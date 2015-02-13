@@ -14,7 +14,22 @@
   width: 100%;
 }
 
-.room {
+.room-1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100vh;
+
+  background: url("../../img/tiles/start.png") no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.room-0 {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -39,6 +54,8 @@
   position: absolute;
   bottom: 105px;
 	left: 50px;
+
+  z-index: 500;
 }
 
 .inventory-container {
@@ -140,4 +157,12 @@
 
 .hover {
   animation: hover 5s ease-in-out infinite;
+}
+
+h3.item-name {
+  position: absolute;
+  width: 200px;
+  top: -20px;
+  left: -50px;
+  text-align: center;
 }
