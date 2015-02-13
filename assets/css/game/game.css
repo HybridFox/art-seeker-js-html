@@ -14,6 +14,20 @@
   width: 100%;
 }
 
+#fx {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  height: 100vh;
+  width: 100%;
+
+  z-index: 1000;
+  pointer-events: none;
+
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .room-1 {
   position: absolute;
   top: 0px;
@@ -22,7 +36,7 @@
   width: 100%;
   height: 100vh;
 
-  background: url("../../img/tiles/start.png") no-repeat bottom center fixed;
+  background: url("../../img/tiles/room.png") no-repeat bottom center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -37,7 +51,7 @@
   width: 100%;
   height: 100vh;
 
-  background: url("../../img/tiles/room.png") no-repeat bottom center fixed;
+  background: url("../../img/tiles/start.png") no-repeat bottom center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

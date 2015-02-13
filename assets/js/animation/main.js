@@ -35,6 +35,7 @@ $(document).keyup(function (e) {
   if (e.keyCode == currentKey) {
     currentKey = false;
     clearInterval(TimerWalk);
+    $("#character").stop(true, true)
     $('#character').animateSprite('stop')
   }
 });

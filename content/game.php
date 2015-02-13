@@ -1,6 +1,3 @@
-<?php
-  $room = $_GET["room"];
-?>
 <div id="game-container">
   <div id="inventory">
     <div class="inventory-container">
