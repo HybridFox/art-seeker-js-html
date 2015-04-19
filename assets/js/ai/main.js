@@ -1,5 +1,6 @@
 var aiDir = "right";
 var walkInterval;
+var aiWalkDuration = 11000;
 
 function loadAI() {
   $("#ai").animateSprite({
@@ -13,22 +14,26 @@ function loadAI() {
     }
   });
 
+  walkInterval = setInterval(function(){ $('#ai').animate({left: '+=20'}, 200); }, 200);
+  $('#ai').removeClass("turn-left");
+  $('#ai').addClass("turn-right");
+  aiDir = "left";
+
   setInterval(
     function(){
       clearInterval(walkInterval);
       $("#ai").stop(true);
-      console.log(aiDir);
       if (aiDir == "right") {
-        walkInterval = setInterval(function(){ $('#ai').animate({left: '+=20'}, charSpeed); }, 40);
+        walkInterval = setInterval(function(){ $('#ai').animate({left: '+=20'}, 200); }, 200);
         $('#ai').removeClass("turn-left");
         $('#ai').addClass("turn-right");
         aiDir = "left";
       } else if (aiDir == "left") {
-        walkInterval = setInterval(function(){ $('#ai').animate({left: '-=20'}, charSpeed); }, 40);
+        walkInterval = setInterval(function(){ $('#ai').animate({left: '-=20'}, 200); }, 200);
         $('#ai').removeClass("turn-right");
         $('#ai').addClass("turn-left");
         aiDir = "right";
       }
-    }, 3000
+    }, aiWalkDuration
   );
 }

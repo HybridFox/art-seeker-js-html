@@ -81,9 +81,39 @@
 
   position: absolute;
   bottom: 105px;
-	left: 200px;
+	left: 300px;
 
-  z-index: 500;
+  z-index: 400;
+
+  cursor: pointer;
+}
+
+.painting {
+  position: absolute;
+  top: 28%;
+  left: 40%;
+  width: 700px;
+  height: 300px;
+}
+
+.painting img {
+  width: 100%;
+  height: auto;
+}
+
+.text-bubble {
+  position: absolute;
+  top: -35px;
+  left: -30px;
+  width: 75px;
+  height: 30px;
+  font-size: 0.3em;
+  padding: 2px 5px 10px 5px;
+  background: url("../../img/game/textbubble.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 
 .inventory-container {
@@ -145,6 +175,14 @@
 
 .turn-right {
   transform: scale(6,6) rotateY(0deg)!important;
+}
+
+.turn-right > .text-bubble {
+  transform: rotateY(0deg)!important;
+}
+
+.turn-left > .text-bubble {
+  transform: rotateY(180deg)!important;
 }
 
 #overlay {
