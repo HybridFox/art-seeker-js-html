@@ -19,10 +19,12 @@ $(document).keydown(function (e) {
     switch (e.keyCode) {
       case 39:
         charWalk('right');
+        console.log("walk");
         $("#character").animateSprite('resume');
         break;
       case 37:
         charWalk('left');
+        console.log("walk");
         $("#character").animateSprite('resume');
         break;
     }

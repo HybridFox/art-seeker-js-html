@@ -18,7 +18,7 @@
   -o-image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
   -o-image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
 
-  -moz-image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+  -moz-image-rendering: optimizeSpeed;             /*                 GIVE ME SPEED  */
   -moz-image-rendering: -moz-crisp-edges;          /* Firefox                        */
   -moz-image-rendering: -o-crisp-edges;            /* Opera                          */
   -moz-image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
