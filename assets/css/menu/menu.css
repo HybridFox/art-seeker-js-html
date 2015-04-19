@@ -152,3 +152,12 @@ body {
   height: 100%;
   background-color: #e74c3c;
 }
+
+.roomcounter {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  font-size: 4em;
+  color: white;
+  z-index: 1000;
+}
