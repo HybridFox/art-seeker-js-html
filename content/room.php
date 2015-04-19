@@ -12,4 +12,9 @@
           <img src="assets/img/game/items/<?php echo $r_array; ?>.png" alt="Test Salad" class="hover"/>
         </div>
       </div>
+      <?php
+        if ($room == 0) {
+          echo "<div id='ai'></div>";
+        }
+      ?>
     </div>

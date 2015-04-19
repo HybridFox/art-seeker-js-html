@@ -72,6 +72,20 @@
   z-index: 500;
 }
 
+#ai {
+  width: 20px;
+  height: 40px;
+  background: url("../../img/spritesheet.png");
+  transition: transform .2s;
+  transform: scale(6,6) rotateY(0deg);
+
+  position: absolute;
+  bottom: 105px;
+	left: 200px;
+
+  z-index: 500;
+}
+
 .inventory-container {
   width: 870px;
   margin: auto;

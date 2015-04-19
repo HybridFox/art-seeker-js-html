@@ -1,4 +1,5 @@
 var pr;
+var items = new Array();
 
 $(document).ready(function() {
   console.log( "ready!" );
@@ -147,5 +148,6 @@ function gameInit(char) {
   $.get("content/room.php?room=0", function(data){
     $(".room-container").html(data);
     clickInit();
+    loadAI();
   });
 }
