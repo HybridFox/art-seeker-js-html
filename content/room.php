@@ -5,12 +5,7 @@
     "test-sword"
   );
   $r_array = $item[array_rand($item)];
-  $painting = array(
-    "1",
-    "1",
-    "1"
-  );
-  $r_painting = $painting[array_rand($painting)];
+  
 ?>
     <div class="room <?php if ($room == 0) {echo "room-0";} else {echo "room-1";} ?>">
       <div id="overlay">
