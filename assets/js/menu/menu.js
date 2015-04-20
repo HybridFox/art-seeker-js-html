@@ -64,7 +64,9 @@ function loadGame(char) {
   $("#menu").addClass("animated bounceOut");
   $("#load").addClass("animated zoomInUp");
   pr = 0;
-
+  $.ajax({
+    url: "gen/create_session.php"
+  });
   var loadbar = setInterval(function(){
     $(".load-bar > .inner").css("width",pr + "%");
     pr++;

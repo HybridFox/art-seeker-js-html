@@ -121,6 +121,20 @@
   margin: auto;
 }
 
+.debug {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  font-family: "Courier New", Courier, monospace;
+  width: 300px;
+  height: 100vh;
+  color: lime;
+  background-color: black;
+  text-align: right;
+  padding: 10px;
+  z-index: 5000;
+}
+
 #inventory {
   position: absolute;
   top: 0px;

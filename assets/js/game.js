@@ -17,6 +17,9 @@ function clickInit() {
       });
       $(".slot.o-" + slotsTaken).html("<div class='item'><img src='assets/img/game/items/" + itemUrl + ".png' alt='Test Sword' class='animated zoomIn'/></div>")
       console.log(slotsTaken);
+      $.ajax({
+        url: "gen/add_item.php?item=" + itemName
+      });
       slotsTaken++;
     } else {
       alert("bar full");
