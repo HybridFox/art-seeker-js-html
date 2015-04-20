@@ -228,6 +228,11 @@
   z-index: 300;
 }
 
+.pickup-item.no-pickup {
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
 #overlay > .pickup-item > img {
   position: relative;
   top: -110px;
