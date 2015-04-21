@@ -15,8 +15,9 @@ function clickInit() {
       $(this).css({
         "pointer-events": "none"
       });
-      $(".slot.o-" + slotsTaken).html("<div class='item'><img src='assets/img/game/items/" + itemUrl + ".png' alt='Test Sword' class='animated zoomIn'/></div>")
+      $(".slot.o-" + slotsTaken).html("<div class='item'><img src='assets/img/game/items/" + itemUrl + ".png' alt='Test Sword' class='animated zoomIn'/><div class='delete'><i class='fa fa-trash-o'></i></div></div>")
       console.log(slotsTaken);
+      clickInit()
       $.ajax({
         url: "gen/add_item.php?item=" + itemName + "&room=" + $(".room").attr("data-room")
       });
@@ -24,6 +25,10 @@ function clickInit() {
     } else {
       alert("bar full");
     }
+  });
+  $(".delete").on("click", function() {
+    console.log("removed");
+    $(this).parent(".item").remove();
   });
 }
 

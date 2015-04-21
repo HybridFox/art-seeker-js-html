@@ -133,6 +133,11 @@
   text-align: right;
   padding: 10px;
   z-index: 5000;
+  opacity: 0.1;
+}
+
+.debug:hover {
+  opacity: 1;
 }
 
 #inventory {
@@ -183,6 +188,16 @@
   height: 100%;
 }
 
+.item > .delete {
+  position: absolute;
+  bottom: -15px;
+  left: -5px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  z-index: 5000;
+}
+
 .turn-left {
   transform: scale(6,6) rotateY(180deg)!important;
 }
@@ -208,6 +223,8 @@
   width: 100%;
 
   z-index: 750;
+
+  pointer-events: none;
 }
 
 #overlay > .pickup-item {
@@ -215,6 +232,7 @@
   bottom: 30px;
 
   cursor: pointer;
+  pointer-events: all;
 
   height: 108px;
   width: 90px;
