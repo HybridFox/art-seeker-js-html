@@ -4,19 +4,19 @@
   </div>
   <div id="inventory">
     <div class="inventory-container">
-      <div class="slot o-1">
+      <div class="slot-1">
 
       </div>
-      <div class="slot o-2">
+      <div class="slot-2">
 
       </div>
-      <div class="slot o-3">
+      <div class="slot-3">
 
       </div>
-      <div class="slot o-4">
+      <div class="slot-4">
 
       </div>
-      <div class="slot o-5">
+      <div class="slot-5">
 
       </div>
     </div>
